@@ -1,0 +1,17 @@
+.iapp-emoji-wrap {
+    // background-color: white;
+    // border-radius: 10px;
+    // @include BoxShadowHelper(1);
+    cursor: pointer;
+    float: left;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 120px;
+}
+
+.iapp-emoji-name {
+    font-family: "Futura Today Light", Arial, sans-serif;
+    font-size: 1em;
+    margin: 0.5em auto;
+}
