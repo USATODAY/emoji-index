@@ -51,7 +51,7 @@ __p += '<div class="iapp-emoji-image-wrap">\n    <div class="iapp-share-close ia
 '&link=' +
 ((__t = (fbShare)) == null ? '' : __t) +
 '&picture=' +
-((__t = (stillimage)) == null ? '' : __t) +
+((__t = (directImgur)) == null ? '' : __t) +
 '&name=&description=' +
 ((__t = (encodedShare)) == null ? '' : __t) +
 '&redirect_uri=' +

@@ -11,7 +11,7 @@ define([
                 if ((hostname == "localhost" || hostname == "10.0.2.2")) {
                     dataURL = 'data/' + filename;
                 } else {
-                    dataURL = "http://" + hostname + "/services/webproxy/?url=http://www.gannett-cdn.com/experiments/usatoday/2015/05/emoji-index/data/" + filename;
+                    dataURL = "http://" + hostname + "/services/webproxy/?url=http://www.gannett-cdn.com/experiments/usatoday/2015/06/emoji-index/data/" + filename;
                 }
                 return dataURL;
             },

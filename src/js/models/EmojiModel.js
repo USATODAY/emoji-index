@@ -11,12 +11,11 @@ define([
                 'baseURL': baseURL,
                 'fbShare': this.createFbShareURL(baseURL),
                 'twitterShare': this.createTwitterShareURL(baseURL),
-                'twitterShareImage': this.createTwitterShareURL(" " + this.get('image_url')),
+                'twitterShareImage': this.createTwitterShareURL(" " + this.get('pageImgur')),
                 'share_language': this.get('name'),
                 'encodedShare': encodeURIComponent(this.get('name')),
                 'fb_id': config.fb_app_id,
                 'email_link': this.createEmailLink(baseURL),
-                'stillimage': this.get('image_url'),
                 'fb_redirect': 'http://' + window.location.hostname + '/pages/interactives/fb-share/',
             }); 
         },
