@@ -17,13 +17,17 @@ define(
             },
             events: {
                 "click .iapp-share-close": "closeView",
-                'click .iapp-share-popup': 'onShareButtonClick'
+                'click .iapp-share-popup': 'onShareButtonClick',
+                'click .iapp-download': 'onDownloadClick'
             },
             closeView: function() {
                 this.remove();
             },
+            onDownloadClick: function() {
+                Analytics.trackEvent("Whole emoji set downloaded");
+            },
             onShareButtonClick: function(e) {
-                Analytics.trackEvent('Social share button clicked');
+                Analytics.trackEvent('Page social share button clicked');
                 e.preventDefault();
                 
 
