@@ -7,9 +7,12 @@ define(
         'templates',
         'collections/EmojiCollection',
         'views/EmojiView',
-        'views/ShareView'
+        'views/ShareView',
+        'views/PageShareView',
+        'models/ShareModel',
+        'config'
     ],
-    function(jQuery, _, Backbone, imagesLoaded, templates, EmojiCollection, EmojiView, ShareView){
+    function(jQuery, _, Backbone, imagesLoaded, templates, EmojiCollection, EmojiView, ShareView, PageShareView, ShareModel, config){
         return Backbone.View.extend({
             initialize: function() {
                 this.listenTo(Backbone, "data:ready", this.render);
@@ -17,8 +20,10 @@ define(
             },
             template: templates["AppView.html"],
             render: function(data) {
-                console.log(data);
                 this.$el.append(this.template({head: data.head, chatter: data.chatter}));
+                var shareModel = new ShareModel({share_language: data.share_language, shareImage: config.shareImage});
+                var shareView = new PageShareView({model: shareModel, el: '.iapp-page-share-wrap'});
+                console.log(shareView);
                 this.addSubViews(data);
             },
             addSubViews: function(data) {

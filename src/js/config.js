@@ -22,6 +22,7 @@ define([
 
     return {
         'image_path': 'http://www.gannett-cdn.com/experiments/usatoday/2015/06/emoji-index/img/custom/100/',
+        shareImage: 'http://www.gannett-cdn.com/experiments/usatoday/2015/06/emoji-index/img/fb-post.jpg',
         staticInfo: staticInfo,
         fb_app_id: fb_app_id
     };
