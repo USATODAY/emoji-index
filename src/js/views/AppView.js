@@ -25,13 +25,11 @@ define(
                 var shareModel = new ShareModel({share_language: data.share_language, shareImage: config.shareImage, isDesktop: isDesktop, zipDownload: config.zipDownload});
 
                 var shareView = new PageShareView({model: shareModel, el: '.iapp-page-share-wrap'});
-                console.log(shareView);
                 this.addSubViews(data);
             },
             addSubViews: function(data) {
                 var _this = this;
                 var emojiCollection = new EmojiCollection(data.emojis);
-                console.log(emojiCollection);
                 this.subViews = [];
                 emojiCollection.each(function(emojiModel) {
                     var emojiView = new EmojiView({model: emojiModel});
