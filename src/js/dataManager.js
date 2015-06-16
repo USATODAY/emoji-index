@@ -34,7 +34,7 @@ define([
                 return parsedData;
             },
             getImgurLinks: function(emojiObj) {
-                var directImgur = "http://i.imgur.com/" + emojiObj.imgur_id + ".png";
+                var directImgur = "http://i.imgur.com/" + emojiObj.imgur_id + ".jpg";
                 var pageImgur = "http://imgur.com/" + emojiObj.imgur_id;
                 return {
                     directImgur: directImgur,
