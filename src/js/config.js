@@ -13,7 +13,7 @@ define([
     }
 
     if (isMobile === false) {
-        if (Modernizr.touch) {
+        if (Modernizr.touch && window.innerWidth < 1100) {
             isTablet = true;
         }
     }
@@ -25,6 +25,8 @@ define([
         shareImage: 'http://www.gannett-cdn.com/experiments/usatoday/2015/06/emoji-index/img/fb-post.jpg',
         zipDownload: 'http://www.gannett-cdn.com/experiments/usatoday/2015/06/emoji-index/img/USATODAY_POLITICAL_EMOJI.zip',
         staticInfo: staticInfo,
-        fb_app_id: fb_app_id
+        fb_app_id: fb_app_id,
+        isMobile: isMobile,
+        isTablet: isTablet
     };
 });

@@ -21,7 +21,7 @@ define(
             template: templates["AppView.html"],
             render: function(data) {
                 this.$el.append(this.template({head: data.head, chatter: data.chatter}));
-                var isDesktop = !config.isMobile && !config.isTable;
+                var isDesktop = !config.isMobile && !config.isTablet;
                 var shareModel = new ShareModel({share_language: data.share_language, shareImage: config.shareImage, isDesktop: isDesktop, zipDownload: config.zipDownload});
 
                 var shareView = new PageShareView({model: shareModel, el: '.iapp-page-share-wrap'});
