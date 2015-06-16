@@ -34,7 +34,8 @@ return __p
 
 this["templates"]["PageShare.html"] = function(obj) {
 obj || (obj = {});
-var __t, __p = '', __e = _.escape;
+var __t, __p = '', __e = _.escape, __j = Array.prototype.join;
+function print() { __p += __j.call(arguments, '') }
 with (obj) {
 __p += '<div class="iapp-share-buttons">\n    <a href="https://twitter.com/intent/tweet?url=' +
 ((__t = (twitterShare)) == null ? '' : __t) +
@@ -50,7 +51,15 @@ __p += '<div class="iapp-share-buttons">\n    <a href="https://twitter.com/inten
 ((__t = (encodedShare)) == null ? '' : __t) +
 '&redirect_uri=' +
 ((__t = (fb_redirect)) == null ? '' : __t) +
-'" class="iapp-share-button iapp-share-facebook iapp-share-popup" target="_blank"><img src="http://www.gannett-cdn.com/experiments/usatoday/2015/06/emoji-index/img/fb.svg" alt="Facebook share"></a>\n</div>\n';
+'" class="iapp-share-button iapp-share-facebook iapp-share-popup" target="_blank"><img src="http://www.gannett-cdn.com/experiments/usatoday/2015/06/emoji-index/img/fb.svg" alt="Facebook share"></a>\n    ';
+ if (isDesktop) { ;
+__p += '\n        <a href="' +
+((__t = ( zipDownload )) == null ? '' : __t) +
+'" download="' +
+((__t = ( zipDownload )) == null ? '' : __t) +
+'" class="iapp-share-button iapp-download"><img src="http://www.gannett-cdn.com/experiments/usatoday/2015/06/emoji-index/img/download-icon.svg" alt="Download All"></a>\n    ';
+ } ;
+__p += '\n</div>\n';
 
 }
 return __p
@@ -84,7 +93,7 @@ __p += '<div class="iapp-emoji-image-wrap">\n    <div class="iapp-share-close ia
 ((__t = ( image_url )) == null ? '' : __t) +
 '" download="' +
 ((__t = ( image_url )) == null ? '' : __t) +
-'" class="iapp-share-button iapp-download"><img src="http://www.gannett-cdn.com/experiments/usatoday/2015/06/emoji-index/img/download-icon.svg" alt="Email share"></a>\n</div>\n';
+'" class="iapp-share-button iapp-download"><img src="http://www.gannett-cdn.com/experiments/usatoday/2015/06/emoji-index/img/download-icon.svg" alt="Download"></a>\n</div>\n';
 
 }
 return __p

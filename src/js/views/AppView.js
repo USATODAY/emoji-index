@@ -21,7 +21,9 @@ define(
             template: templates["AppView.html"],
             render: function(data) {
                 this.$el.append(this.template({head: data.head, chatter: data.chatter}));
-                var shareModel = new ShareModel({share_language: data.share_language, shareImage: config.shareImage});
+                var isDesktop = !config.isMobile && !config.isTable;
+                var shareModel = new ShareModel({share_language: data.share_language, shareImage: config.shareImage, isDesktop: isDesktop, zipDownload: config.zipDownload});
+
                 var shareView = new PageShareView({model: shareModel, el: '.iapp-page-share-wrap'});
                 console.log(shareView);
                 this.addSubViews(data);
